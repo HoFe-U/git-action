@@ -36,6 +36,7 @@ jobs:
         host: ${{ secrets.SSH_IP }}
         username: ${{ secrets.SSH_ID }}
         key: ${{ secrets.SSH_KEY }}
+        passphrase: ${{secrets.SSH_PASSPHRASE}}
         port: ${{ secrets.SSH_PORT }}
         source: "target/*.jar"
         target: "~/"
@@ -47,6 +48,7 @@ jobs:
         host: ${{ secrets.SSH_IP }}
         username: ${{ secrets.SSH_ID }}
         key: ${{ secrets.SSH_KEY }}
+        passphrase: ${{secrets.SSH_PASSPHRASE}}
         port: ${{ secrets.SSH_PORT }}
         script_stop: true
         script: "~/startup.sh"
